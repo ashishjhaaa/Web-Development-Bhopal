@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <title>CSS Selectors</title>
+    <style>
+      /* Universal Selector - Applies styles to all elements on the page */
+      * {
+        font-family: cursive, sans-serif;
+      }
+
+      /* Element Selector - Targets all <p> elements */
+      p {
+        color: #0074d9;
+      }
+
+      /* Class Selector - Targets elements with class="classname" */
+      .classname {
+        background: #ffdc00;
+      }
+
+      /* ID Selector - Targets the element with id="idname" */
+      #idname {
+        font-weight: bold;
+      }
+
+      /* Group Selector - Applies same styles to multiple selectors */
+      h1,
+      h2,
+      p {
+        margin-bottom: 10px;
+      }
+
+      /* Descendant Selector - Targets <p> inside <div> at any level */
+      div p {
+        border-left: 14px solid #2ecc40;
+        padding-left: 8px;
+      }
+
+      /* Child Selector - Targets <p> that are direct children of <div> */
+      div > p {
+        background: #e9a0a0;
+      }
+
+      /* Adjacent Sibling Selector - Targets <p> immediately after <h1> */
+      h1 + p {
+        color: #ff4136;
+      }
+
+      /* General Sibling Selector - Targets all <p> after <h1> */
+      h1 ~ p {
+        font-style: italic;
+      }
+
+      /* Attribute Selector - Targets input elements with type="text" */
+      input[type="text"] {
+        border: 2px solid #0074d9;
+      }
+
+      /* Pseudo-class - Applies styles when user hovers on the link */
+      a:hover {
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 5px;
+      }
+
+      /* Pseudo-element - Styles the first letter of a paragraph */
+      p::first-letter {
+        font-size: 2em;
+        color: #b10dc9;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS Selectors Demo</h1>
+    <h2>Basic Selectors</h2>
+    <p>This is a paragraph (element selector).</p>
+    <p class="classname">This paragraph uses a class selector.</p>
+    <p id="idname">This paragraph uses an ID selector.</p>
+
+    <h2>Grouping & Combining</h2>
+    <div>
+      <p>Paragraph inside a div (descendant selector).</p>
+      <p>Direct child paragraph (child selector).</p>
+    </div>
+    <h1>Heading 1</h1>
+    <p>Paragraph immediately after h1 (adjacent sibling selector).</p>
+    <p>Another paragraph after h1 (general sibling selector).</p>
+
+    <h2>Attribute Selector</h2>
+    <input type="text" placeholder="Type here..." />
+    <input type="password" placeholder="Password" />
+
+    <h2>Pseudo-class</h2>
+    <a href="#">Hover over this link</a>
+
+    <h2>Pseudo-element</h2>
+    <p>
+      This paragraph demonstrates the
+      <code>::first-letter</code> pseudo-element.
+    </p>
+  </body>
+</html>

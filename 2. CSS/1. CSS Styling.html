@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>CSS Styling</title>
+    <style>
+      .internal-css {
+        background-color: #dd9292;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>CSS Basics</h1>
+    <h2>What is CSS?</h2>
+    <p>
+      CSS (Cascading Style Sheets) is used to style and layout web pages. It
+      separates content from design.
+    </p>
+    <ul>
+      <li>
+        <strong>Inline CSS:</strong> Style added directly to an HTML element.
+      </li>
+      <li>
+        <strong>Internal CSS:</strong> Style added inside a &lt;style&gt; tag in
+        the &lt;head&gt; section.
+      </li>
+      <li>
+        <strong>External CSS:</strong> Style written in a separate .css file and
+        linked with &lt;link&gt;.
+      </li>
+    </ul>
+
+    <h2>CSS Syntax</h2>
+    <pre>
+      selector {
+                property: value;
+            }
+    </pre>
+
+    <h2>Ways to Add CSS (Examples)</h2>
+
+    <p><strong>Inline CSS:</strong></p>
+    <div style="color: blue">This text is blue (inline CSS).</div>
+
+    <p><strong>Internal CSS:</strong></p>
+    <div class="internal-css">This box uses internal CSS.</div>
+
+    <p><strong>External CSS:</strong></p>
+    <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>
+    <div class="external-css">
+      This box would use external CSS from styles.css.
+    </div>
+  </body>
+</html>
