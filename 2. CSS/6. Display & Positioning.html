@@ -1,0 +1,234 @@
+<html>
+  <head>
+    <title>Display & Positioning</title>
+    <style>
+      /* Display Section */
+      .block {
+        display: block;
+        background: #f7c6c6;
+        margin-bottom: 5px;
+      }
+
+      .inline {
+        display: inline;
+        background: #b3c6ff;
+      }
+
+      .inline-block {
+        display: inline-block;
+        background: #ffd699;
+        width: 100px;
+      }
+
+      .none {
+        display: none;
+      }
+
+      .flex {
+        display: flex;
+        background: #d1ffd6;
+        gap: 10px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background: #ffe0e0;
+        gap: 10px;
+      }
+
+      /* Visibility Section */
+      .visible {
+        visibility: visible;
+        background: #e6ccff;
+      }
+
+      .hidden {
+        visibility: hidden;
+        background: #ffcccc;
+      }
+
+      /* Position Section */
+      .static {
+        position: static;
+        background: #c2f0fc;
+      }
+
+      .relative {
+        position: relative;
+        left: 20px;
+        background: #f9e79f;
+      }
+
+      .absolute-container {
+        position: relative;
+        height: 60px;
+        background: #f2f2f2;
+      }
+
+      .absolute {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #d5f5e3;
+      }
+
+      .fixed {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background: #fadbd8;
+        z-index: 2;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 0;
+        background: #d6eaf8;
+      }
+
+      .zindex1 {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        z-index: 1;
+        background: #f5b7b1;
+      }
+
+      .zindex2 {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        z-index: 2;
+        background: #aed6f1;
+      }
+
+      /* Overflow Section */
+      .overflow-visible {
+        overflow: visible;
+        background: #f7cac9;
+        width: 150px;
+        height: 50px;
+      }
+
+      .overflow-hidden {
+        overflow: hidden;
+        background: #b2dfdb;
+        width: 150px;
+        height: 50px;
+      }
+
+      .overflow-scroll {
+        overflow: scroll;
+        background: #ffe082;
+        width: 150px;
+        height: 50px;
+      }
+
+      .overflow-auto {
+        overflow: auto;
+        background: #c5e1a5;
+        width: 150px;
+        height: 50px;
+      }
+
+      /* Float & Clear Section */
+      .float-left {
+        float: left;
+        background: #b3e5fc;
+        width: 80px;
+      }
+
+      .float-right {
+        float: right;
+        background: #ffccbc;
+        width: 80px;
+      }
+
+      .clear-both {
+        clear: both;
+        background: #dcedc8;
+      }
+
+      .clear-left {
+        clear: left;
+        background: #f8bbd0;
+      }
+
+      .clear-right {
+        clear: right;
+        background: #d1c4e9;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Display Section -->
+    <h2>Display</h2>
+    <div class="block">display: block</div>
+    <span class="inline">display: inline</span>
+    <span class="inline-block">display: inline-block</span>
+    <span class="none">display: none (hidden)</span>
+    <div class="flex">
+      <div>display: flex item 1</div>
+      <div>display: flex item 2</div>
+    </div>
+    <div class="grid">
+      <div>display: grid item 1</div>
+      <div>display: grid item 2</div>
+    </div>
+
+    <!-- Visibility Section -->
+    <h2>Visibility</h2>
+    <div class="visible">visibility: visible</div>
+    <div class="hidden">visibility: hidden (hidden)</div>
+
+    <!-- Position Section -->
+    <h2>Position</h2>
+    <div class="static">position: static</div>
+    <div class="relative">position: relative (left: 20px)</div>
+    <div class="absolute-container">
+      <div class="absolute">position: absolute (top: 10px, right: 10px)</div>
+    </div>
+    <div class="fixed">position: fixed (top: 10px, left: 10px)</div>
+    <div style="height: 60px; position: relative">
+      <div class="zindex1">z-index: 1</div>
+      <div class="zindex2">z-index: 2 (overlaps z-index: 1)</div>
+    </div>
+    <div style="height: 80px; overflow: auto">
+      <div class="sticky">position: sticky (top: 0)</div>
+      <div style="height: 100px"></div>
+    </div>
+
+    <!-- Overflow Section -->
+    <h2>Overflow</h2>
+    <div class="overflow-visible">
+      overflow: visible<br />
+      <span style="background: #ffb3b3">This text overflows the box.</span>
+    </div>
+    <div class="overflow-hidden">
+      overflow: hidden<br />
+      <span style="background: #b3ffb3">This text overflows the box.</span>
+    </div>
+    <div class="overflow-scroll">
+      overflow: scroll<br />
+      <span style="background: #b3b3ff">This text overflows the box.</span>
+    </div>
+    <div class="overflow-auto">
+      overflow: auto<br />
+      <span style="background: #ffffb3">This text overflows the box.</span>
+    </div>
+
+    <!-- Float & Clear Section -->
+    <h2>Float & Clear</h2>
+    <div class="float-left">float: left</div>
+    <div class="float-right">float: right</div>
+    <div class="clear-both">clear: both</div>
+    <div style="height: 40px"></div>
+    <div class="float-left">float: left</div>
+    <div class="clear-left">clear: left</div>
+    <div style="height: 40px"></div>
+    <div class="float-right">float: right</div>
+    <div class="clear-right">clear: right</div>
+  </body>
+</html>
