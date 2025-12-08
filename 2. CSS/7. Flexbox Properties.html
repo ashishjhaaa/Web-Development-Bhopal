@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <title>Flexbox Properties</title>
+    <style>
+      /* Flex Container Properties Section */
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px solid #333;
+        height: 200px;
+        background: #f0f0f0;
+        margin-bottom: 30px;
+      }
+
+      .flex-item {
+        background: #8ecae6;
+        padding: 20px;
+        margin: 5px;
+        font-size: 16px;
+        border-radius: 5px;
+        min-width: 80px;
+        text-align: center;
+      }
+
+      /* Flex Item Properties Section */
+      .flex-container-items {
+        display: flex;
+        border: 2px solid #27df3c;
+        height: 120px;
+        background: #f0cfcf;
+        margin-bottom: 30px;
+      }
+
+      .item1 {
+        order: 2;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 80px;
+        background: #ffb703;
+        align-self: flex-start;
+      }
+
+      .item2 {
+        order: 1;
+        flex-grow: 2;
+        flex-shrink: 2;
+        flex-basis: 100px;
+        background: #219ebc;
+        align-self: center;
+      }
+
+      .item3 {
+        order: 3;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 60px;
+        background: #023047;
+        color: #fff;
+        align-self: flex-end;
+      }
+
+      .item4 {
+        order: 4;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 70px;
+        background: #fb8500;
+        align-self: stretch;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Flex Container Properties Section -->
+    <section>
+      <h2>Flex Container Properties</h2>
+      <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+        <div class="flex-item">Item 5</div>
+      </div>
+      <ul>
+        <li><strong>display: flex</strong> - Makes the container a flexbox.</li>
+        <li>
+          <strong>flex-direction: row</strong> - Items are placed in a row.
+        </li>
+        <li>
+          <strong>flex-wrap: wrap</strong> - Items wrap onto multiple lines.
+        </li>
+        <li>
+          <strong>justify-content: space-between</strong> - Space between items.
+        </li>
+        <li>
+          <strong>align-items: center</strong> - Items centered vertically.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Flex Item Properties Section -->
+    <section>
+      <h2>Flex Item Properties</h2>
+      <div class="flex-container-items">
+        <div class="flex-item item1">Item 1</div>
+        <div class="flex-item item2">Item 2</div>
+        <div class="flex-item item3">Item 3</div>
+        <div class="flex-item item4">Item 4</div>
+      </div>
+      <ul>
+        <li><strong>order</strong> - Controls item order.</li>
+        <li><strong>flex-grow</strong> - How much item grows.</li>
+        <li><strong>flex-shrink</strong> - How much item shrinks.</li>
+        <li><strong>flex-basis</strong> - Initial size of item.</li>
+        <li>
+          <strong>align-self</strong> - Overrides align-items for individual
+          item.
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
