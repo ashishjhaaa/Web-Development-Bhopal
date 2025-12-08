@@ -1,0 +1,164 @@
+<html>
+  <head>
+    <title>Lists & Tables Properties</title>
+    <style>
+      /* Lists Section */
+      .list-disc {
+        list-style-type: disc;
+      }
+
+      .list-circle {
+        list-style-type: circle;
+      }
+
+      .list-square {
+        list-style-type: square;
+      }
+
+      .list-none {
+        list-style-type: none;
+      }
+
+      .list-inside {
+        list-style-position: inside; /* bullets inside the content box */
+      }
+
+      .list-outside {
+        list-style-position: outside; /* default value */
+      }
+
+      .list-image {
+        list-style-image: url("https://picsum.photos/200/50");
+      }
+
+      /* Tables Section */
+      .collapse-table {
+        border-collapse: collapse;
+        border-spacing: 15px; /* has no effect when border-collapse is collapse */
+      }
+
+      .spacing-table {
+        border-collapse: separate; /* default value */
+        border-spacing: 15px;
+      }
+
+      .caption-top {
+        caption-side: top; /* default value */
+      }
+
+      .caption-bottom {
+        caption-side: bottom;
+      }
+
+      .empty-show {
+        empty-cells: show;
+      }
+
+      .empty-hide {
+        empty-cells: hide;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Lists Section -->
+    <h2>Lists</h2>
+    <h3>list-style-type</h3>
+    <ul class="list-disc">
+      <li>Disc</li>
+      <li>Disc</li>
+    </ul>
+    <ul class="list-circle">
+      <li>Circle</li>
+      <li>Circle</li>
+    </ul>
+    <ul class="list-square">
+      <li>Square</li>
+      <li>Square</li>
+    </ul>
+    <ul class="list-none">
+      <li>None</li>
+      <li>None</li>
+    </ul>
+
+    <h3>list-style-position</h3>
+    <ul class="list-inside">
+      <li>Inside</li>
+      <li>Inside</li>
+    </ul>
+    <ul class="list-outside">
+      <li>Outside</li>
+      <li>Outside</li>
+    </ul>
+
+    <h3>list-style-image</h3>
+    <ul class="list-image">
+      <li>Image</li>
+      <li>Image</li>
+    </ul>
+
+    <!-- Tables Section -->
+    <h2>Tables</h2>
+    <h3>border-collapse</h3>
+    <table class="collapse-table">
+      <caption>
+        Collapse
+      </caption>
+      <tr>
+        <td>Cell 1</td>
+        <td>Cell 2</td>
+      </tr>
+    </table>
+
+    <h3>border-spacing</h3>
+    <table class="spacing-table">
+      <caption>
+        Spacing
+      </caption>
+      <tr>
+        <td>Cell 1</td>
+        <td>Cell 2</td>
+      </tr>
+    </table>
+
+    <h3>caption-side</h3>
+    <table>
+      <caption class="caption-top">
+        Top Caption
+      </caption>
+      <tr>
+        <td>Cell 1</td>
+        <td>Cell 2</td>
+      </tr>
+    </table>
+    <table>
+      <caption class="caption-bottom">
+        Bottom Caption
+      </caption>
+      <tr>
+        <td>Cell 1</td>
+        <td>Cell 2</td>
+      </tr>
+    </table>
+
+    <h3>empty-cells</h3>
+    <table class="empty-show">
+      <tr>
+        <td>Show</td>
+        <td></td>
+      </tr>
+    </table>
+    <table class="empty-hide">
+      <tr>
+        <td>Hide</td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+</html>
