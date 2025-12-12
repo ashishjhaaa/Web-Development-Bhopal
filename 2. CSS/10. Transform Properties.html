@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>CSS Transform Properties</title>
+
+    <style>
+      /* ===== COMMON STYLES ===== */
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+      }
+
+      section {
+        margin: 30px auto;
+        width: 80%;
+        padding: 20px;
+        border: 2px solid #ccc;
+        background: #ffffff;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      .box {
+        width: 120px;
+        height: 120px;
+        background: steelblue;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        font-weight: bold;
+      }
+
+      /* ================= SCALE ================= */
+      .scale-box {
+        /* scale(x, y)
+         1 = original size
+         >1 = zoom in
+         <1 = zoom out */
+        transform: scale(1.3, 0.8);
+      }
+
+      /* ================= ROTATE ================= */
+      .rotate-box {
+        /* rotate(angle)
+         Positive = clockwise
+         Negative = anticlockwise */
+        transform: rotate(30deg);
+      }
+
+      /* ================= TRANSLATE ================= */
+      .translate-box {
+        /* translate(x, y)
+         px / % are commonly used
+         does NOT affect document flow */
+        transform: translate(40px, 20px);
+      }
+
+      /* ================= SKEW ================= */
+      .skew-box {
+        /* skew(x-angle, y-angle)
+         distorts element along axis */
+        transform: skew(20deg, 10deg);
+      }
+
+      /* ================= TRANSFORM ORIGIN ================= */
+      .origin-box {
+        /* transform-origin
+         controls pivot point of transform */
+        transform-origin: left top;
+        transform: rotate(30deg);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- SCALE SECTION -->
+    <section>
+      <h2>Scale</h2>
+      <p><strong>Use:</strong> Increase or decrease size</p>
+      <div class="box scale-box">Scale</div>
+    </section>
+
+    <!-- ROTATE SECTION -->
+    <section>
+      <h2>Rotate</h2>
+      <p><strong>Use:</strong> Rotate element</p>
+      <div class="box rotate-box">Rotate</div>
+    </section>
+
+    <!-- TRANSLATE SECTION -->
+    <section>
+      <h2>Translate</h2>
+      <p><strong>Use:</strong> Move element visually</p>
+      <div class="box translate-box">Translate</div>
+    </section>
+
+    <!-- SKEW SECTION -->
+    <section>
+      <h2>Skew</h2>
+      <p><strong>Use:</strong> Tilt or distort</p>
+      <div class="box skew-box">Skew</div>
+    </section>
+
+    <!-- TRANSFORM ORIGIN SECTION -->
+    <section>
+      <h2>Transform Origin</h2>
+      <p><strong>Use:</strong> Change rotation / scale starting point</p>
+      <div class="box origin-box">Origin</div>
+    </section>
+  </body>
+</html>
