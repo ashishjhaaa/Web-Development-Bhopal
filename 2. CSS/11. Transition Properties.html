@@ -1,0 +1,143 @@
+<html>
+  <head>
+    <title>Transition Properties</title>
+
+    <style>
+      /* ====== BASIC LAYOUT ====== */
+      body {
+        font-family: cursive;
+        background: #f2f4f6;
+      }
+
+      section {
+        width: 85%;
+        margin: 30px auto;
+        padding: 20px;
+        background: #fff;
+        border: 2px solid #ccc;
+      }
+
+      h2 {
+        margin-bottom: 8px;
+      }
+
+      p {
+        margin: 6px 0;
+      }
+
+      /* Common box used in all sections */
+      .box {
+        width: 120px;
+        height: 120px;
+        background: steelblue;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-top: 15px;
+
+        /* Default transition values (important to tell students) */
+        transition-property: all; /* default: all */
+        transition-duration: 0s; /* default: 0s (NO animation) */
+        transition-timing-function: ease; /* default: ease */
+        transition-delay: 0s; /* default: 0s */
+      }
+
+      /* Hover change used everywhere */
+      .box:hover {
+        width: 180px;
+        background: tomato;
+      }
+
+      /* ===== TRANSITION-PROPERTY ===== */
+      .property {
+        transition-property: width; /* Only width will animate */
+        transition-duration: 1s;
+      }
+
+      /* ===== TRANSITION-DURATION ===== */
+      .duration {
+        transition-duration: 2s; /* Time taken to complete transition */
+      }
+
+      /* ===== TRANSITION-TIMING-FUNCTION ===== */
+      .timing {
+        transition-duration: 1.5s;
+        transition-timing-function: ease-in-out;
+      }
+
+      /* ===== TRANSITION-DELAY ===== */
+      .delay {
+        transition-duration: 1s;
+        transition-delay: 1s; /* Waits before animation starts */
+      }
+
+      /* ===== SHORTHAND (REAL-WORLD USAGE) ===== */
+      .shorthand {
+        transition: all 1.2s ease-in-out 0s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- TRANSITION PROPERTY -->
+    <section>
+      <h2>1. transition-property</h2>
+      <p>
+        <strong>What it does:</strong> Tells CSS which property should animate.
+      </p>
+      <p>
+        <strong>Common values:</strong> all (default), width, height,
+        background-color, transform
+      </p>
+      <p><strong>Default value:</strong> all</p>
+      <div class="box property">Hover</div>
+    </section>
+
+    <!-- TRANSITION DURATION -->
+    <section>
+      <h2>2. transition-duration</h2>
+      <p>
+        <strong>What it does:</strong> Defines how long the transition takes.
+      </p>
+      <p><strong>Common values:</strong> s, ms (1s, 500ms)</p>
+      <p><strong>Default value:</strong> 0s (no animation)</p>
+      <div class="box duration">Hover</div>
+    </section>
+
+    <!-- TRANSITION TIMING FUNCTION -->
+    <section>
+      <h2>3. transition-timing-function</h2>
+      <p>
+        <strong>What it does:</strong> Controls the speed curve of animation.
+      </p>
+      <p><strong>Common values:</strong></p>
+      <p>ease (default) - slow → fast → slow</p>
+      <p>linear - same speed</p>
+      <p>ease-in - slow start</p>
+      <p>ease-out - slow end</p>
+      <p>ease-in-out - slow start & end</p>
+      <p><strong>Default value:</strong> ease</p>
+      <div class="box timing">Hover</div>
+    </section>
+
+    <!-- TRANSITION DELAY -->
+    <section>
+      <h2>4. transition-delay</h2>
+      <p><strong>What it does:</strong> Wait time before transition starts.</p>
+      <p><strong>Common values:</strong> s, ms (1s, 300ms)</p>
+      <p><strong>Default value:</strong> 0s</p>
+      <div class="box delay">Hover</div>
+    </section>
+
+    <!-- SHORTHAND -->
+    <section>
+      <h2>Transition Shorthand (Industry Usage)</h2>
+      <p>
+        <strong>Order:</strong> property → duration → timing-function → delay
+      </p>
+      <p><strong>Example:</strong> transition: all 1.2s ease-in-out 0s;</p>
+      <div class="box shorthand">Hover</div>
+    </section>
+  </body>
+</html>
