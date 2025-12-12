@@ -1,0 +1,218 @@
+<html>
+  <head>
+    <title>Animation Properties</title>
+
+    <style>
+      /* ===== BASIC SETUP ===== */
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+      }
+
+      section {
+        width: 85%;
+        margin: 30px auto;
+        padding: 20px;
+        background: white;
+        border: 2px solid #ccc;
+      }
+
+      h2 {
+        margin-bottom: 8px;
+      }
+
+      p {
+        margin: 5px 0;
+      }
+
+      /* Common animated box */
+      .box {
+        width: 120px;
+        height: 120px;
+        background: steelblue;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      /* ===================================================== */
+      /* 1. KEYFRAMES + ANIMATION-NAME                         */
+      /* ===================================================== */
+
+      /* keyframes define WHAT happens during animation */
+      @keyframes moveAndColor {
+        0% {
+          transform: translateX(0);
+          background: steelblue;
+        }
+        50% {
+          transform: translateX(150px);
+          background: orange;
+        }
+        100% {
+          transform: translateX(0);
+          background: steelblue;
+        }
+      }
+
+      .name-demo {
+        /* animation-name connects element to keyframes */
+        animation-name: moveAndColor;
+        animation-duration: 2s;
+      }
+
+      /* ===================================================== */
+      /* 2. ANIMATION-DURATION                                 */
+      /* ===================================================== */
+
+      .duration-demo {
+        animation-name: moveAndColor;
+        animation-duration: 4s; /* time to complete one cycle */
+      }
+
+      /* Default duration = 0s (means animation will not run) */
+
+      /* ===================================================== */
+      /* 3. ANIMATION-DELAY                                    */
+      /* ===================================================== */
+
+      .delay-demo {
+        animation-name: moveAndColor;
+        animation-duration: 2s;
+        animation-delay: 1s; /* waits before starting */
+      }
+
+      /* Default delay = 0s */
+
+      /* ===================================================== */
+      /* 4. ANIMATION-ITERATION-COUNT                          */
+      /* ===================================================== */
+
+      .iteration-demo {
+        animation-name: moveAndColor;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        /* common values: 1 (default), 2, 3, infinite */
+      }
+
+      /* ===================================================== */
+      /* 5. ANIMATION-DIRECTION                                */
+      /* ===================================================== */
+
+      .direction-demo {
+        animation-name: moveAndColor;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        /* values:
+         normal (default)
+         reverse
+         alternate
+         alternate-reverse */
+      }
+
+      /* ===================================================== */
+      /* 6. ANIMATION-TIMING-FUNCTION                          */
+      /* ===================================================== */
+
+      .timing-demo {
+        animation-name: moveAndColor;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        /* common values:
+         ease (default)
+         linear
+         ease-in
+         ease-out
+         ease-in-out */
+      }
+
+      /* ===================================================== */
+      /* 7. ANIMATION-FILL-MODE                                */
+      /* ===================================================== */
+
+      .fill-demo {
+        animation-name: moveAndColor;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        /* values:
+         none (default)
+         forwards
+         backwards
+         both */
+      }
+
+      /* ===================================================== */
+      /* 8. SHORTHAND (REAL-WORLD USAGE)                       */
+      /* ===================================================== */
+
+      .shorthand-demo {
+        animation: moveAndColor 2s ease-in-out 0s infinite alternate;
+        /*
+        order:
+        name | duration | timing-function | delay | iteration-count | direction
+      */
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>1. animation-name</h2>
+      <p>Links the element to keyframes.</p>
+      <p><strong>Default:</strong> none</p>
+      <div class="box name-demo">Move</div>
+    </section>
+
+    <section>
+      <h2>2. animation-duration</h2>
+      <p>Controls how long one animation cycle takes.</p>
+      <p><strong>Default:</strong> 0s (animation won't run)</p>
+      <div class="box duration-demo">Slow</div>
+    </section>
+
+    <section>
+      <h2>3. animation-delay</h2>
+      <p>Wait time before animation starts.</p>
+      <p><strong>Default:</strong> 0s</p>
+      <div class="box delay-demo">Wait</div>
+    </section>
+
+    <section>
+      <h2>4. animation-iteration-count</h2>
+      <p>Number of times animation repeats.</p>
+      <p><strong>Default:</strong> 1</p>
+      <div class="box iteration-demo">Loop</div>
+    </section>
+
+    <section>
+      <h2>5. animation-direction</h2>
+      <p>Controls forward / backward movement.</p>
+      <p><strong>Default:</strong> normal</p>
+      <div class="box direction-demo">Alternate</div>
+    </section>
+
+    <section>
+      <h2>6. animation-timing-function</h2>
+      <p>Controls speed curve of animation.</p>
+      <p><strong>Default:</strong> ease</p>
+      <div class="box timing-demo">Smooth</div>
+    </section>
+
+    <section>
+      <h2>7. animation-fill-mode</h2>
+      <p>Controls styles before/after animation.</p>
+      <p><strong>Default:</strong> none</p>
+      <div class="box fill-demo">Freeze</div>
+    </section>
+
+    <section>
+      <h2>8. Animation Shorthand</h2>
+      <p>Used in real projects.</p>
+      <div class="box shorthand-demo">Pro</div>
+    </section>
+  </body>
+</html>

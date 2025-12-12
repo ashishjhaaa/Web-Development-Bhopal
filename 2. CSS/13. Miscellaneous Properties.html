@@ -1,0 +1,132 @@
+<html>
+  <head>
+    <title>Miscellaneous Properties</title>
+    <style>
+      /* Cursor Section */
+      .cursor-pointer {
+        cursor: pointer;
+      }
+
+      .cursor-text {
+        cursor: text;
+      }
+
+      .cursor-move {
+        cursor: move;
+      }
+
+      .cursor-wait {
+        cursor: wait;
+      }
+
+      /* Opacity Section */
+      .opacity-low {
+        opacity: 0.3;
+      }
+
+      .opacity-mid {
+        opacity: 0.6;
+      }
+
+      .opacity-full {
+        opacity: 1;
+      }
+
+      /* Object-fit & Object-position Section */
+      .object-cover {
+        width: 300px;
+        height: 320px;
+        object-fit: cover;
+        object-position: center;
+        border: 1px solid #333;
+      }
+
+      .object-contain {
+        width: 300px;
+        height: 320px;
+        object-fit: contain;
+        object-position: top left;
+        border: 1px solid #333;
+      }
+
+      /* Units & Measurements Section */
+      .absolute-units {
+        width: 150px;
+        /* px */
+        height: 40pt;
+        /* pt */
+        margin-bottom: 1cm;
+        /* cm */
+        background: #e0e0e0;
+      }
+
+      .relative-units {
+        width: 50%;
+        /* % */
+        font-size: 2em;
+        /* em */
+        padding: 1rem;
+        /* rem */
+        height: 10vh;
+        /* vh */
+        margin-left: 25vw;
+        /* vw */
+        background: #c0ffc0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Cursor Section -->
+    <section>
+      <h2>Cursor</h2>
+      <button class="cursor-pointer">Pointer Cursor</button>
+      <input class="cursor-text" type="text" placeholder="Text Cursor" />
+      <div
+        class="cursor-move"
+        style="display: inline-block; padding: 8px; border: 1px solid #aaa"
+      >
+        Move Cursor
+      </div>
+      <span class="cursor-wait" style="padding: 8px; border: 1px solid #aaa"
+        >Wait Cursor</span
+      >
+    </section>
+
+    <!-- Opacity Section -->
+    <section>
+      <h2>Opacity</h2>
+      <div class="opacity-low" style="background: #f99; padding: 10px">
+        Opacity 0.3
+      </div>
+      <div class="opacity-mid" style="background: #9f9; padding: 10px">
+        Opacity 0.6
+      </div>
+      <div class="opacity-full" style="background: #99f; padding: 10px">
+        Opacity 1
+      </div>
+    </section>
+
+    <!-- Object-fit & Object-position Section -->
+    <section>
+      <h2>Object-fit & Object-position</h2>
+      <img
+        class="object-cover"
+        src="https://picsum.photos/600/400"
+        alt="Cover"
+      />
+      <img
+        class="object-contain"
+        src="https://picsum.photos/600/400"
+        alt="Contain"
+      />
+    </section>
+
+    <!-- Units & Measurements Section -->
+    <section>
+      <h2>Units & Measurements</h2>
+      <div class="absolute-units">Absolute Units: px, pt, cm</div>
+      <div class="relative-units">Relative Units: %, em, rem, vh, vw</div>
+    </section>
+  </body>
+</html>
